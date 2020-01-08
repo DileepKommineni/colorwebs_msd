@@ -1,0 +1,710 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MSD Publications</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Sridher Goud Thodeti">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="static/assets/images/favicon.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" type="text/css" href="static/assets/css/menu.css">
+  <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <script type="text/javascript" src="static/assets/webslidemenu/webslidemenu.js"></script>
+  <link rel="stylesheet" href="static/assets/webslidemenu/demo.css" />
+   <!--Main Menu File-->
+  <link rel="stylesheet" href="static/assets/css/style.css" />
+<link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="static/assets/css/owl.theme.min.css">
+</head>
+<body>
+  <!-- Mobile Header -->
+  <div class="headtoppart clearfix">
+    <div class="container">
+    <div class="upper-right pull-right">
+                        <!--Info Box-->
+                        <div class="upper-column info-box">
+                        	<div class="icon-box"><span class="fas fa-envelope"></span>msdpublications@gmail.com</div>
+                        </div>
+                        <!--Info Box-->
+                        <div class="upper-column info-box">
+                        	<div class="icon-box"><span class="fas fa-phone"></span>+91-98765 43210</div>
+                        </div>
+						
+						<!--Info Box-->
+                        <div class="upper-column info-box">
+                        	<div class="icon-box"><span class="fas fa-map-marker-alt"></span>Hyderabad </div>
+                        </div>
+                    </div>
+                </div>
+  </div>
+ <!--  navbar section start -->
+<header class="header_area">
+  <div class="main_header_area animated">
+    <div class="container">
+      <nav id="navigation1" class="navigation">
+        <!-- Logo Area Start -->
+        <div class="nav-header">
+          <a class="nav-brand" href="home">
+            <img src="static/assets/images/logo.png">
+          </a>
+          <div class="nav-toggle"></div>
+        </div>
+        <!-- Search panel Start -->
+     <!--    <div class="nav-search">
+          <div class="nav-search-button">
+            <i class="nav-search-icon"></i>
+          </div>
+          <form>
+            <div class="nav-search-inner">
+              <input type="search" name="search" placeholder="Type Your Keywords">
+            </div>
+          </form>
+        </div> -->
+        <!-- Main Menus Wrapper -->
+        <div class="nav-menus-wrapper">
+          <ul class="nav-menu align-to-right">
+             <li><a href="home">Home</a></li>
+            <li><a href="publications">All Publications</a> </li>
+              <li><a href="about_open">Open Access</a></li>
+            <li><a href="ebooks">E-Books</a> </li>
+            <li><a href="submit_articles">Submit Article</a> </li>
+               <li><a href="#">Best Practices</a>
+              <div class="megamenu-panel">
+                <div class="megamenu-lists">
+                  <ul class="megamenu-list list-col-4">
+                      <li class="title ba-font-ff">Guidelines &amp; Information</li>
+                      <li><a href="company_information">Company Information</a></li>
+                      <li><a href="author_guidelines">Author Guidelines</a></li>
+                      <li><a href="editor_guidelines">Editor Guidelines</a></li>
+                      <li><a href="reviewer_guidelines">Reviewer Guidelines</a></li>
+                      <li><a href="peer_review">Peer Review Guidelines</a></li>
+                      <li><a href="special_issue">Special Issue Guidelines</a></li>
+                      <li><a href="article_processing">Article Processing Charges</a></li>
+                   
+                  </ul>
+                  <ul class="megamenu-list list-col-4">
+                  <li class="title ba-font-ff">Policies &amp; Ethics</li>
+                      <li><a href="indexing">Indexing</a></li>
+                      <li><a href="benefits">Benefits for Authors</a></li>
+                      <li><a href="publication_ethics">Publication Ethics</a></li>
+                      <li><a href="about_open">About Open Access</a></li>
+                      <li><a href="about_peer">About Peer review</a></li>
+                  </ul>
+                  <ul class="megamenu-list list-col-4">
+                     <li class="title ba-font-ff">Initiatives</li>
+                      <li><a href="collaborations">Collaborations</a></li>
+                      <li><a href="reprints">Reprints and Permissions</a></li>
+                      <li><a href="membership">Membership Program</a></li>
+                  </ul>
+                  <ul class="megamenu-list list-col-4">
+                     <li class="title ba-font-ff">Help &amp; Info</li>
+                      <li><a href="faqs">Frequently Asked Questions</a></li>
+                      <li><a href="contact">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            
+            <li><a href="signin">Signin/Signup</a></li>
+             <!-- <li class="donate-btn"><a href="#">Donate</a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+ <!-- navbar section close -->
+ <!-- banner titles sections start -->
+<div id="banner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Submit Article</h2>
+        <p><a href="home" class="hm-a">Home</a> // <a href="submit_articles" class="pg-a">Submit Article</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- banner titles sections close -->
+ <!-- information section start -->
+<div id="submit-manu-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+        <div class="manuscript-form">
+           <form action="article_submit" method="POST">{%csrf_token%}
+
+    <h2 class="sbmanu-t">SUBMIT MANUSCRIPT</h2><br>
+     <h4><b>Alternatively, manuscripts can be submitted directly to msdpublications@gmail.com</b></h4>
+      <div class="frm-row">
+        <label>Title:</label>
+      <div class="fld"><select name="title" id="drpTitle" class="form-control">
+          <option value="">Select title</option>
+          <option value="Dr">Dr</option>
+          <option value="Prof">Prof</option>
+          <option value="Mr">Mr</option>
+          <option value="Ms">Ms</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Miss">Miss</option>
+           </select></div>
+    </div>
+    <div class="frm-row">
+      <label>Full Name:</label>
+       <div class="fld"><input type="text" name="full_name" class="form-control"></div>
+    </div>
+   <div class="frm-row">
+      <label>University/Organization:</label>
+      <div class="fld"><input type="text" name="university" id="txtUniversityOrganization" class="form-control"></div>
+    </div>
+    <div class="frm-row">
+      <label>Affiliation:</label>
+      <div class="fld"><textarea name="affilliation" class="form-control"></textarea></div>
+    </div>
+   <div class="frm-row">
+      <label>Email:</label>
+     <div class="fld"><input type="text" name="email" class="form-control"></div>
+    </div>
+    <div class="frm-row">
+      <label>Phone:</label>
+      <div class="fld"><input type="text" name="phone_no" id="txtPhone" class="form-control"></div>
+    </div>
+    <div class="frm-row">
+      <label>Choose Journal:</label>
+       <div class="fld"><select name="choose_journal" id="drpJournal"  class="form-control">
+      <option value="">Select Journal</option> 
+      <option value="Advances in Computer Sciences">Advances in Computer Sciences</option>
+      <option value="Agronomy and Agricultural Techniques">Agronomy and Agricultural Techniques</option>
+      <option value="Basic, Applied Pharmacy and Pharmacology">Basic, Applied Pharmacy and Pharmacology</option>
+      <option value="Biomedical Research and Reviews">Biomedical Research and Reviews</option>
+      <option value="Journal of Cancer Research and Oncobiology">Journal of Cancer Research and Oncobiology</option>
+                        <option value="Cyber Crime and Information Technology">Cyber Crime and Information Technology</option>
+      <option value="Clinical HIV and AIDS Journal">Clinical HIV and AIDS Journal</option>
+      <option value="Clinical Dermatology and Dermatitis">Clinical Dermatology and Dermatitis</option>
+      <option value="Clinical and Experimental Orthopedics">Clinical and Experimental Orthopedics</option>
+      <option value="Currents Trends in Vaccines and Vaccinology">Currents Trends in Vaccines and Vaccinology</option>
+      <option value="Drug Design Development and Delivery Journal">Drug Design Development and Delivery Journal</option>
+      <option value="Endocrinology and Diabetes open access">Endocrinology and Diabetes open access</option>
+      <option value="Food and Nutrition open access">Food and Nutrition open access</option>
+                        <option value="Science and Crime Research">Forensic Science and Crime Research</option>
+                        <option value="Sports Medicine and Physical Activity">Sports Medicine and Physical Activity</option>
+      <option value="Functional and Structural Genomics and Medicine">Functional and Structural Genomics and Medicine</option>
+      <option value="Imaging and Reports Journal">Imaging and Reports Journal</option>
+      <option value="Infections and Treatment Journal">Infections and Treatment Journal</option>
+      <option value="International Journal of Biopharmaceutical Sciences">International Journal of Biopharmaceutical Sciences</option>
+      <option value="International Journal of Clinical and Medical Cases">International Journal of Clinical and Medical Cases</option>
+      <option value="International journal of Immunology and Immunobiology">International journal of Immunology and Immunobiology </option>
+      <option value="International Journal of Renal diseases and Therapy">International Journal of Renal diseases and Therapy</option>
+      <option value="International Journal of Surgical Procedures">International Journal of Surgical Procedures</option>
+      <option value="International Journal of Space Science and Technology">International Journal of Space Science and Technology</option>
+      <option value="International Journal of Veterinary and Animal Medicine">International Journal of Veterinary and Animal Medicine</option>
+      <option value="International Journal of Cardiology and Cardiovascular Medicine">International Journal of Cardiology and Cardiovascular Medicine</option>
+                        <option value="Journal of Adolescent Medicine and Critical Issues">Journal of Adolescent Medicine and Critical Issues</option>
+                        <option value="Journal of Chest and Pulmonary Medicine">Journal of Chest and Pulmonary Medicine</option>
+      <option value="Journal of Dentistry and Dental Medicine">Journal of Dentistry and Dental Medicine</option>
+      <option value="Journal of Emerging and Rare Diseases">Journal of Emerging and Rare Diseases</option>
+                        <option value="Journal of Psychiatric Studies">Journal of Psychiatric Studies</option>
+      <option value="Journal of Neuroscience and Neurosurgery">Journal of Neuroscience and Neurosurgery</option>
+      <option value="Journal of Water technology and Treatment methods">Journal of Water technology and Treatment methods</option>
+      <option value="Methods of Microbiology and Molecular Biology">Methods of Microbiology and Molecular Biology</option>
+      <option value="Eye and Glaucoma Research">Eye and Glaucoma Research</option>
+      <option value="Systems and Computational Biology Journal">Systems and Computational Biology Journal</option>
+        <option value="Journal of Alcohol and Drug Addiction">Journal of Alcohol and Drug Addiction</option>
+        <option value="Journal of Anesthesia and Perioperative Care">Journal of Anesthesia and Perioperative Care</option>
+        <option value="Journal of Blood Disorders and Malignancies">Journal of Blood Disorders and Malignancies</option>
+        <option value="Journal of Gynecology and Reproductive Biology">Journal of Gynecology and Reproductive Biology</option>
+        <option value="Journal of Multilingual Research">Journal of Multilingual Research</option>
+        <option value="Journal of Obesity and Medical Complications">Journal of Obesity and Medical Complications</option>
+        <option value="Journal of Translational Gastroenterology and Clinical Hepatology">Journal of Translational Gastroenterology and Clinical Hepatology</option>
+        <option value="Journal of Rheumatology and Connective Tissue Diseases">Journal of Rheumatology and Connective Tissue Diseases</option>
+        <option value="Journal of Urinary Tract Infections">Journal of Urinary Tract Infections</option>
+        <option value="Pollution Prevention and Control">Pollution Prevention and Control</option>
+        <option value="Nursing Practice and Health Care">Nursing Practice and Health Care</option>
+        <option value="Chemical Science and Biomolecular Engineering">Chemical Science and Biomolecular Engineering</option>
+        <option value="Marine Science and Biology">Marine Science and Biology</option>
+      </select> 
+      </div>
+    </div>
+    <div class="frm-row">
+      <label>Article Type:</label>
+      <div class="fld"><select name="article_type" id="drpArticleType"  class="form-control">
+      <option value="" >Select Article Type</option> 
+      <option value="Research articles">Research articles</option>
+      <option value="Review article">Review article</option>
+      <option value="Case reports">Case reports</option>
+      <option value="Mini review">Mini review</option>
+      <option value="Short Communication">Short Communication</option>
+      <option value="Editorials">Editorials</option>
+      <option value="Letter to Editor">Letter to Editor</option>
+      <option value="Analysis articles">Analysis articles</option>
+      <option value="Opinion articles">Opinion articles</option>
+      </select></div>
+    </div>
+    <div class="frm-row">
+      <label>Article Title:</label>
+      <div class="fld"><input type="text" name="article_title" id="txtArticleTitle"  class="form-control"></div>
+    </div> 
+    <div class="frm-row">
+      <label>Attachment Article:</label>
+      <div class="fld">
+      <input type="file"  name="attachment_article">
+      </div>
+    </div>
+    <div class="frm-row text-center"> 
+<br>
+    
+            <input type="submit" value="Submit Article" id="btnSubmit" class="btn"><br>
+    </div> 
+
+
+</form>
+        </div>
+      </div>
+       <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+ <!-- information section close -->
+<!-- footer section start -->
+<footer class="footer-top">
+            <div class="container">
+               <div class="row">   
+                   <div class="col-md-3">
+                       <h3>+91-98765 43210</h3>
+                   </div>
+                    <div class="col-md-3">
+                       <h3><a href="#" target="_blank">msdpublications@gmail.com</a></h3>
+                   </div>
+                   <div class="col-md-3">
+                       <h3><a href="#">
+
+Hyderabad</a></h3>
+                   </div>
+                  
+                   <div class="col-md-3">
+                       <h3>24x7x365</h3>
+                   </div>
+               </div>                
+            </div>
+        </footer>
+        <footer class="footer-center">
+            <div class="container">
+             
+                <div class="row">   
+                   <div class="col-md-3 item-center">
+                        <span class="arrow_footer"></span>
+                        <i class="fa fa-phone"></i>
+                        <h4>Talk to Us</h4>                        
+                   </div>
+                    <div class="col-md-3 item-center">
+                       <span class="arrow_footer"></span>
+                        <i class="fa fa-envelope"></i>
+                        <h4>Email Us</h4>                        
+                   </div>
+                   <div class="col-md-3 item-center">
+                        <span class="arrow_footer"></span>
+                        <i class="fa fa-map-marker-alt"></i>
+                        <h4>Location</h4>                        
+                   </div>
+                  
+                   <div class="col-md-3 item-center">
+                        <span class="arrow_footer"></span>
+                        <i class="fa fa-thumbs-up"></i>
+                        <h4>Good Support</h4>                        
+                   </div>
+                </div>   
+               
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="top"></div>
+                    </div>
+                </div> 
+               
+                <div class="row">  
+                   
+                    <div class="col-md-3">
+                        <div class="border-right">
+                            <img src="static/assets/images/logo.png" height="100px;" >  
+
+                            </div>                        
+                        </div>
+                
+                    <div class="col-md-3">
+                        <div class="border-right">
+                            <h4>Useful Links</h4>
+                           <ul class="links">
+                            	<li><a href="home" >Home</a></li>
+    <li><a href="company_information">Company Information</a></li>
+    <li><a href="publications">Publications</a></li>
+     <li><a href="ebooks">E-Books</a></li> 
+      <li><a href="submit_articles">Submit Article</a> </li>   
+                            </ul>
+                       </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="border-right">
+                            <h4>Useful Links</h4>
+                            <ul class="links">
+       			 	  <li><a href="collaborations">Collaborations</a></li>
+                      <li><a href="reprints">Reprints and Permissions</a></li>
+                      <li><a href="membership">Membership Program</a></li>
+                      <li><a href="faqs">Frequently Asked Questions</a></li>
+                      <li><a href="contact">Contact Us</a></li>
+                            </ul>
+                       </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h4>Follow Us</h4>
+                       <div id="social"><a class="facebookBtn smGlobalBtn" href="#"></a>
+      <a class="twitterBtn smGlobalBtn" href="#"></a>
+      <a class="googleplusBtn smGlobalBtn" href="#"></a>
+      <a class="linkedinBtn smGlobalBtn" href="#"></a>
+    </div>
+                    </div>
+                </div>    
+            </div>
+        </footer>
+        <footer class="footer-bottom">
+          <div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-6 copyright wow slideInUp">
+<p> © 2019 MSD Publications. All Rights Reserved.
+</p>
+</div>
+<div class="col-md-6 col-sm-6 design wow slideInUp">
+<p>Designed By  <a href="http://www.angularwebs.com/" target="_blank"> Angular Webs</a></p>
+</div>
+</div>
+</div>
+        </footer>
+
+<!-- footer section close -->
+<!-- <div id="stop" class="scrollTop">
+     <div class='scroll icon'><i class="fa fa-2x fa-angle-up"></i></div>
+    <span><a href="">Top</a></span>
+  </div> -->
+<!--<div class='scrolltop'>-->
+<!--    <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>-->
+<!--</div>-->
+</div>
+</body>
+</html>
+
+   <script src="static/assets/js/jquery.min.js"></script>
+<script src="static/assets/js/bootstrap.min.js"></script>
+<script src="static/assets/js/nav_menu.js" type="text/javascript"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+<script type="text/javascript" src="static/assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+ <!--   <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script> -->
+<!-- <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script> -->
+<script type="text/javascript">
+ $(document).ready(function() {    
+    //Events that reset and restart the timer animation when the slides change
+    $("#transition-timer-carousel").on("slide.bs.carousel", function(event) {
+        //The animate class gets removed so that it jumps straight back to 0%
+        $(".transition-timer-carousel-progress-bar", this)
+            .removeClass("animate").css("width", "0%");
+    }).on("slid.bs.carousel", function(event) {
+        //The slide transition finished, so re-add the animate class so that
+        //the timer bar takes time to fill up
+        $(".transition-timer-carousel-progress-bar", this)
+            .addClass("animate").css("width", "100%");
+    });
+    
+    //Kick off the initial slide animation when the document is ready
+    $(".transition-timer-carousel-progress-bar", "#transition-timer-carousel")
+        .css("width", "100%");
+});
+</script>
+
+<script type="text/javascript">
+   $(window).on('scroll', function () {
+if ($(this).scrollTop() > 250) { // Set position from top
+    $('.header_area').addClass("page-scroll");
+}else{
+    $('.header_area').removeClass("page-scroll");
+}
+});
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#testimonial-slider").owlCarousel({
+        items:3,
+        itemsDesktop:[1000,3],
+        itemsDesktopSmall:[979,3],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:false,
+        slideSpeed:1000,
+        autoPlay:true
+    });
+});
+</script>
+<!-- <script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000
+    })
+  });
+
+</script> -->
+<script type="text/javascript">
+  $('.js-anchor-link').click(function(e){
+  e.preventDefault();
+  var target = $($(this).attr('href'));
+  if(target.length){
+    var scrollTo = target.offset().top;
+    $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
+  }
+});
+</script>
+<script type="text/javascript">
+//   $('.Show').click(function() {
+//     $('#target').show(500);
+//     $('.Show').hide(0);
+//     $('.Hide').show(0);
+//      $("#plus").text("-");
+// });
+// $('.Hide').click(function() {
+//     $('#target').hide(500);
+//     $('.Show').show(0);
+//     $('.Hide').hide(0);
+// });
+$('.div-s-h').click(function() {
+    $('.show-hide-div').toggle('slow');
+});
+
+$(function() {
+  $('.plus-minus-toggle').on('click', function() {
+    $(this).toggleClass('collapsed');
+  });
+});
+</script>
+<script>
+    // BY KAREN GRIGORYAN
+
+$(document).ready(function() {
+  /******************************
+      BOTTOM SCROLL TOP BUTTON
+   ******************************/
+
+  // declare variable
+  var scrollTop = $(".scrollTop");
+
+  $(window).scroll(function() {
+    // declare variable
+    var topPos = $(this).scrollTop();
+
+    // if user scrolls down - show scroll to top button
+    if (topPos > 200) {
+      $(scrollTop).css("opacity", "1");
+
+    } else {
+      $(scrollTop).css("opacity", "0");
+    }
+
+  }); // scroll END
+
+  //Click event to scroll to top
+  $(scrollTop).click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+
+  }); // click() scroll top EMD
+
+ 
+}); // ready() END
+</script>
+<script type="text/javascript">
+	$(document).ready(function ()
+{
+	//Fade in delay for the background overlay (control timing here)
+	$("#bkgOverlay").delay(4800).fadeIn(400);
+  //Fade in delay for the popup (control timing here)
+	$("#delayedPopup").delay(5000).fadeIn(400);
+	
+	//Hide dialouge and background when the user clicks the close button
+	$("#btnClose").click(function (e)
+	{
+		HideDialog();
+		e.preventDefault();
+	});
+});
+//Controls how the modal popup is closed with the close button
+function HideDialog()
+{
+	$("#bkgOverlay").fadeOut(400);
+	$("#delayedPopup").fadeOut(300);
+}
+
+</script>
+<script type="text/javascript">
+	var video = document.getElementById("myVideo");
+	var btn = document.getElementById("myBtn");
+
+	function myFunction() {
+	  if (video.paused) {
+	    video.play();
+	    btn.innerHTML = "Pause";
+	  } else {
+	    video.pause();
+	    btn.innerHTML = "Play";
+	  }
+	}
+
+	function myFunction(x) {
+  x.classList.toggle("gn-selected");
+}
+
+	var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    document.getElementById("play-hide").style.display = "none";
+    pauseButton.innerHTML =   "<li class='fa'><img src='static/assets/images/pause1.png' height='65px'></li>";
+     document.getElementById("bgvid").style.display = "block";
+
+  } else {
+    vid.pause();
+    pauseButton.innerHTML =  "<li class='fa'><img src='static/assets/images/play1.png' height='65px'></li>";
+    document.getElementById("play-hide").style.display = "block";
+    
+  }
+})
+
+
+// counter section js
+	$.fn.jQuerySimpleCounter = function( options ) {
+	    var settings = $.extend({
+	        start:  0,
+	        end:    100,
+	        easing: 'swing',
+	        duration: 400,
+	        complete: ''
+	    }, options );
+
+	    var thisElement = $(this);
+	    $({count: settings.start}).animate({count: settings.end}, {
+			duration: settings.duration,
+			easing: settings.easing,
+			step: function() {
+				var mathCount = Math.ceil(this.count);
+				thisElement.text(mathCount);
+			},
+			complete: settings.complete
+		});
+	};
+$('#number1').jQuerySimpleCounter({end: 1200,duration: 4000});
+$('#number2').jQuerySimpleCounter({end: 347,duration: 4000});
+$('#number3').jQuerySimpleCounter({end: 75,duration: 4000});
+$('#number4').jQuerySimpleCounter({end: 246,duration: 4000});
+  	/* AUTHOR LINK */
+     $('.about-me-img').hover(function(){
+            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+        }, function(){
+            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+        });
+  
+</script>
+<script type="text/javascript">
+	$.fn.responsiveTabs = function() {
+
+  return this.each(function() {
+    var el = $(this),
+        tabs = el.find('dt'),
+        content = el.find('dd'),
+        placeholder = $('<div class="responsive-tabs-placeholder"></div>').insertAfter(el);
+
+    tabs.on('click', function() {
+      var tab = $(this);
+
+      tabs.not(tab).removeClass('active');
+      tab.addClass('active');
+
+      placeholder.html( tab.next().html() );
+    });
+
+    tabs.filter(':first').trigger('click');
+  });
+
+}
+
+
+$('.responsive-tabs').responsiveTabs();
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("#news-slider").owlCarousel({
+        items : 5,
+        itemsDesktop:[1199,3],
+        itemsDesktopSmall:[980,2],
+        itemsMobile : [600,1],
+        navigation:true,
+        navigationText:["",""],
+        pagination:true,
+        autoPlay:true
+    });
+});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("#news-slider12").owlCarousel({
+        items : 4,
+        itemsDesktop:[1199,2],
+        itemsDesktopSmall:[980,2],
+        itemsTablet:[650,1],
+        pagination:false,
+        navigation:true,
+        navigationText:["",""]
+    });
+});
+	$(document).ready(function() {
+    $("#news-slider13").owlCarousel({
+        items : 5,
+        itemsDesktop:[1199,2],
+        itemsDesktopSmall:[980,2],
+        itemsTablet:[650,1],
+        pagination:false,
+        navigation:true,
+        navigationText:["",""]
+    });
+});
+</script>
