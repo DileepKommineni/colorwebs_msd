@@ -68,7 +68,7 @@ def collaborations(request):
 	return render(request,'static/collaborations.html')
 
 def company_information(request):
-	return render(request,'static/comopany-information.html')
+	return render(request,'static/company-information.html')
 
 def contact(request):
 	return render(request,'static/contact.html')
@@ -113,7 +113,7 @@ def reprints(request):
 	return render(request,'static/reprints.html')
 
 def review_guidelines(request):
-	return render(request,'static/review-guidelines.html')
+	return render(request,'static/reviewer-guidelines.html')
 
 def signin(request):
 	return render(request,'static/signin.html')
@@ -150,7 +150,7 @@ def article_submit(request):
 					attachment_article=attachment_article
 					)
 		messages.success(request, 'Article Posted successfully.')
-		return render(request,'static/articles.html')
+		return render(request,'static/submit-articles.html')
 
 def contact_submit(request):
 	if request.method == "POST":

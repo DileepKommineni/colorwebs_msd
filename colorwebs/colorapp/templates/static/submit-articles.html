@@ -134,12 +134,14 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        {% if messages %}
+        <div class="manuscript-form">
+          {% if messages %}
 <ul class="messages">
     {% for message in messages %}
     <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
     {% endfor %}
-        <div class="manuscript-form">
+</ul>
+{% endif %}
            <form action="article_submit" method="POST">{%csrf_token%}
 
     <h2 class="sbmanu-t">SUBMIT MANUSCRIPT</h2><br>
