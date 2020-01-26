@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,19 +133,20 @@
 <div class="container">
     <div class="row">
   <br>
+        {% for single_publicatiion in publication_qs %} 
         <div class="col-md-3 col-sm-4" >
            
                 <div class="post-slide">
                       <div class="default-portfolio-item">
                   <div class="inner-box wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
                     <figure class="image-box"><img src="static/assets/images/journal-of-psychiatric-studies.jpg" alt=""></figure>
-                        <h3 class="title"><a href="about_journal">Journal of Anesthesia and Perioperative Care</a></h3>
+                        <h3 class="title"><a href="about_journal">{{ single_publicatiion.publication_name }}</a></h3>
                         <div class="overlay-box">
                           <div class="overlay-inner">
                               <div class="content">
                                   <h3><a href="about_journal">View Journal</a></h3>
                                   <ul class="jour-brd">
-              <li><a href="editorial_board">Editorial Board</a></li>
+              <li><a href="editorial_board?publication_name={{ single_publicatiion.publication_name }}">Editorial Board</a></li>
               <li><a href="current_issue">Current Issue</a></li>
               <li><a href="archive">Archive</a></li>
               <li><a href="submit_articles">Submit Manuscript</a></li>
@@ -165,7 +166,8 @@
                 </div>
                 </div>
  </div>
- <div class="col-md-3 col-sm-4" >
+ {% endfor %}
+ <!-- <div class="col-md-3 col-sm-4" >
                   <div class="post-slide">
                       <div class="default-portfolio-item">
                   <div class="inner-box wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
@@ -177,7 +179,7 @@
                                   <h3><a href="about_journal">View Journal</a></h3>
                                   <ul class="jour-brd">
               <li><a href="editorial_board">Editorial Board</a></li>
-              <li><a href="current-issue">Current Issue</a></li>
+              <li><a href="current_issue">Current Issue</a></li>
               <li><a href="archive">Archive</a></li>
               <li><a href="submit_articles">Submit Manuscript</a></li>
               <li><a href="indexing">Indexing</a></li>
@@ -269,10 +271,10 @@
                               <div class="content">
                                  <h3><a href="about_journal">View Journal</a></h3>
                                   <ul class="jour-brd">
-              <li><a href="editorial_bard">Editorial Board</a></li>
+              <li><a href="editorial_board">Editorial Board</a></li>
               <li><a href="current_issue">Current Issue</a></li>
               <li><a href="archive">Archive</a></li>
-              <li><a href="submit_rticles">Submit Manuscript</a></li>
+              <li><a href="submit_articles">Submit Manuscript</a></li>
               <li><a href="indexing">Indexing</a></li>
                           </ul>
                 <div class="auth-prf-b">
@@ -321,10 +323,10 @@
                 </div>
               </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
-</div>
+</div> 
  <!-- information section close -->
 <!-- footer section start -->
 <footer class="footer-top">

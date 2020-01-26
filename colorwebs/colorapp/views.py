@@ -2,7 +2,12 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
-from colorapp.models import Article,ContactUs
+from colorapp.models import (
+								Article,
+								ContactUs,
+								Publication,
+								EditorialBoard,
+							)
 
 # Create your views here.
 
@@ -86,7 +91,14 @@ def editor_guidelines(request):
 	return render(request,'static/editor-guidelines.html')
 
 def editor_board(request):
-	return render(request,'static/editor-board.html')
+	pub_name = request.GET.get("publication_name")
+	editors_qs = EditorialBoard.objects.filter(
+					publication__publication_name=pub_name)
+	return render(
+			request,
+			'static/editorial-board.html',
+			context={"editors_qs":editors_qs}
+			)
 
 def faqs(request):
 	return render(request,'static/faqs.html')
@@ -104,7 +116,16 @@ def publication_ethics(request):
 	return render(request,'static/publication-ethics.html')
 
 def publications(request):
-	return render(request,'static/publications.html')
+	publication_qs = Publication.objects.all()
+	# publication_nmaes = {}
+	# for single_publication in publication_qs:
+	# 	pub_name = single_publication.publication_name
+
+	return render(
+		request,
+		'static/publications.html',
+		context={"publication_qs":publication_qs}
+		)
 
 def registration_details(request):
 	return render(request,'static/registration-details.html')

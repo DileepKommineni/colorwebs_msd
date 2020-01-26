@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,9 +166,10 @@
           </div>
             <img src="static/assets/images/biomedical-research-reviews.jpg" width="100%">
           </div>
-
+          <h2>Editorial Team</h2>
+          {% for single_editors in editors_qs %} 
           <div class="col-md-12">
-            <h2>Editorial Team</h2>
+            
             <div class="row edit-brd-sec">
             <div class="col-sm-3">
               <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal1">
@@ -188,26 +189,17 @@
         </div>
         <div class="modal-body">
 <div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
+  <h3 class=""><span class="mr20">{{ single_editors.name }}</span>
+                <small>{{ single_editors.designation }}</small>
             </h3>
             <ul class="team-member-details">
             
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
+                <li><span>Department:</span> {{ single_editors.department }}</li>
+                <li><span>University:</span>{{ single_editors.university }}</li>
+                <li><span>Country:</span>{{ single_editors.country }}</li>
             </ul>
             <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
+            <p class="mb30" align="justify"> {{ single_editors.biography }}</p>
         </div>
         </div>
         <div class="modal-footer">
@@ -220,18 +212,18 @@
               <div class="editor-details-chief">
               <h4>Editor-in-Chief</h4>
               <ul>
-                    <li><span>Name:</span>Chen-Chi Shing</li>
-                    <li><span>Designation:</span>Professor</li>
-                    <li><span>Department:</span>Computer Science</li>
-                    <li><span>Email:</span>cshing@RADFORD.EDU</li>
-                    <li><span>University:</span>Radford University</li>
-                    <li><span>Country:</span>USA</li>
+                    <li><span>Name:</span>{{ single_editors.name }}</li>
+                    <li><span>Designation:</span>{{ single_editors.designation }}</li>
+                    <li><span>Department:</span>{{ single_editors.department }}</li>
+                    <li><span>Email:</span>{{ single_editors.email }}</li>
+                    <li><span>University:</span>{{ single_editors.university }}</li>
+                    <li><span>Country:</span>{{ single_editors.country }}</li>
                      </ul>
             </div>
           </div>
           </div>
 
-                    <div class="row edit-brd-sec">
+                    <!-- <div class="row edit-brd-sec">
             <div class="col-sm-3">
               <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal2">
                 <img src="static/assets/images/chen-chi-shing.jpg">
@@ -241,577 +233,18 @@
                     </ul>
                 </div>
             </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Guo Wei</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-      
-    </div>
-  </div> <!-- Modal close-->
+ 
             </div>
-            <div class="col-sm-9">
-              <div class="editor-details-chief">
-              <h4>Editor-in-Chief</h4>
-              <ul>
-                    <li><span>Name:</span>Guo Wei</li>
-                    <li><span>Designation:</span>Professor</li>
-                    <li><span>Department:</span>Computer Science</li>
-                    <li><span>Email:</span>cshing@RADFORD.EDU</li>
-                    <li><span>University:</span>Radford University</li>
-                    <li><span>Country:</span>USA</li>
-                     </ul>
-            </div>
-          </div>
-          </div>
+          </div> -->
 
-          <h2>Executive Editor in Chief</h2>
-
-            <div class="row edit-brd-sec">
-            <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-a">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
             </div>
-             <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-a" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-                        <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-b">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-b" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-                        <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-c">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-c" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-                        <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-d">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-d" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-          </div>
-
-                    <h2>Editorial Board</h2>
-
-            <div class="row edit-brd-sec">
-            <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-aa">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-             <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-aa" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-                        <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-ab">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-ab" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-                        <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-ac">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-ac" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-                        <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-ad">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-ad" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-             <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-ae">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-ae" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-             <div class="col-sm-3">
-              <div class="box editorial-img-sec" data-toggle="modal" data-target="#myModal-af">
-                <img src="static/assets/images/chen-chi-shing.jpg">
-                <div class="box-content">
-                    <ul class="icon">
-                        <li><a href="#">View More</a></li>
-                    </ul>
-                </div>
-            </div>
-              <div class="edit-cap-blck">
-                <h3 class="edit-cap-h3">Abdel-Badeh M Salem</h3>
-                <p class="edit-cap-p">Professor, Egypt</p>
-            </div>
- <!-- Modal start-->
-  <div class="modal fade" id="myModal-af" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-<div class="col-sm-12">
-  <h3 class=""><span class="mr20">Chen-Chi Shing</span>
-                <small>Professor</small>
-            </h3>
-            <ul class="team-member-details">
-            
-                <li><span>Department:</span>Computer Science</li>
-                <li><span>University:</span>Radford University</li>
-                <li><span>Country:</span>USA</li>
-            </ul>
-            <h4><span class="mr10">Biography:</span></h4>
-            <p class="mb30" align="justify">Chen-Chi Shing holds a B.S. degree (Physics) from the Chen-Kung University, Taiwan and M.S. (Physics) and M.S. (Computer Science) degrees from Virginia Tech, a M.S. (Statistics) degree from the Ohio State University and a PhD (Experimental Design) degree from Virginia Tech, U.S.A. Dr. Shing also earned a graduate certificate in Information Assurance (supported by NSA) from Purdue University in the summer of 2004. </p>
-<p class="mb30" align="justify">He is a Professor teaching in the Computer Science concentration at the department of Information Technology (ITEC) at Radford University, Radford, Virginia. His research interests are related to modeling and simulation in security, security assurance, digital forensics, cloud security, data analytics, web survey tool development, repeated measurement designs, course outcome assessment and interface between computer science and statistics. He has been involved in the organization of national and international events related to his research interests as Editor in Chief (e.g. IJCSS), Advisory Committee Chair (e.g. EESP) and was a Program Chair (e.g. ACME).</p>
-            
-     <h4><span class="mr10">Research Interests:</span></h4>
-    <li>Authentication and authorization models</li>
-<li>Communications and data security</li>
-<li>Information security</li>
-<li>Cryptography</li>
-<li>Data mining</li>
-<li>Electronic commerce</li>
-        </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div> <!-- Modal close-->
-            </div>
-          </div>
-
-</div>
+            {% endfor %}
           </div>
       </div>
 
     </div>
   </div>
 </div>
- <!-- information section close -->
 <!-- footer section start -->
 <footer class="footer-top">
             <div class="container">
