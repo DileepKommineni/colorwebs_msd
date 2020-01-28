@@ -66,3 +66,25 @@ class EditorialBoard(models.Model):
 		return self.name
 
 
+class CurrentIssues(models.Model):
+	issue_no = models.CharField(max_length=100,null=True,blank=True)
+	issue_name = models.CharField(max_length=100,null=True,blank=True)
+	intro = models.TextField(max_length=1000,null=True,blank=True)
+	full_text = models.TextField(max_length=1000,null=True,blank=True)
+	artical_type = models.CharField(max_length=100,null=True,blank=True)
+	issues_pdf = models.FileField(
+								upload_to ='current_issues',
+								default='default.jpg',
+								)
+
+class Archive(models.Model):
+	issue_no = models.CharField(max_length=100,null=True,blank=True)
+	issue_name = models.CharField(max_length=100,null=True,blank=True)
+	intro = models.TextField(max_length=1000,null=True,blank=True)
+	full_text = models.TextField(max_length=1000,null=True,blank=True)
+	artical_type = models.CharField(max_length=100,null=True,blank=True)
+	issues_pdf = models.FileField(
+								upload_to ='archive',
+								default='default.jpg',
+								)
+

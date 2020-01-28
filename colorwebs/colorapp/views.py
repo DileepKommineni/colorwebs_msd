@@ -7,6 +7,9 @@ from colorapp.models import (
 								ContactUs,
 								Publication,
 								EditorialBoard,
+								CurrentIssues,
+								Archive,
+
 							)
 
 # Create your views here.
@@ -49,7 +52,13 @@ def archive_fulltext(request):
 	return render(request,'static/archive-fulltext.html')
 
 def archive(request):
-	return render(request,'static/archive.html')
+	archive_qs = Archive.objects.all()
+	return render(
+			request,
+			'static/archive.html',
+			context={'archive_qs':archive_qs
+			}
+			)
 
 def article_processing(request):
 	return render(request,'static/article-processing.html')
@@ -79,7 +88,12 @@ def contact(request):
 	return render(request,'static/contact.html')
 
 def current_issue(request):
-	return render(request,'static/current-issue.html')
+	current_issues_qs = CurrentIssues.objects.all()
+	return render(
+			request,
+			'static/current-issue.html',
+			context={'current_issues_qs':current_issues_qs}
+			)
 
 def current_issue_fulltext(request):
 	return render(request,'static/current-issue-fulltext.html')

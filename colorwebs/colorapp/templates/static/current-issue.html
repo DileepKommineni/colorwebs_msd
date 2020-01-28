@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,28 +179,18 @@
           </div>
       
         <div class="box-services-6">
+          <h2 class="bk-h2-ln">Current Issue</h2>
+          {% for single_issue in current_issues_qs %}
   <div class="col-sm-12 col-md-12">
-    <h2 class="bk-h2-ln">Current Issue</h2>
-    <p class="issue-vlu">Volume 2: Issue 1 - February 2019</p>
+    
+    <p class="issue-vlu">{{ single_issue.issue_no }}</p>
       <div class="art-press"> 
-        <h3>Mini Review</h3>
-        <p>Intestinal Microbiota: A New Actor in the Fight Against Obesity?</p>
-        <p><b>Corresponding author:</b> Giuseppe Merra, Adjunct Professor, Staff Physician, Emergency Department, “Agostino Gemelli” General Hospital, Catholic University of Sacred Heart, Largo, Agostino Gemelli, Rome, Italy; Tel: +39-380-3079304 E-mail: msdpublications@gmail.com</p>
+        <h3>{{ single_issue.artical_type }}</h3>
+        <p>{{ single_issue.intro }}</p>
            <a href="static/assets/pdfs/premeltons-in-dna.pdf" target="_blank" class="a-btn"><i class="far fa-file-pdf"></i> PDF</a> <a href="current-issuse-fulltext.html" class="a-btn"><i class="far fa-file-alt"></i> FULL TEXT</a><br>
-      </div>  
-       <div class="art-press"> 
-        <h3>Research Article</h3>
-        <p>Intestinal Microbiota: A New Actor in the Fight Against Obesity?</p>
-        <p><b>Corresponding author:</b> Giuseppe Merra, Adjunct Professor, Staff Physician, Emergency Department, “Agostino Gemelli” General Hospital, Catholic University of Sacred Heart, Largo, Agostino Gemelli, Rome, Italy; Tel: +39-380-3079304 E-mail: msdpublications@gmail.com</p>
-       <a href="static/assets/pdfs/premeltons-in-dna.pdf" target="_blank" class="a-btn"><i class="far fa-file-pdf"></i> PDF</a> <a href="current-issuse-fulltext.html" class="a-btn"><i class="far fa-file-alt"></i> FULL TEXT</a><br>
-      </div>  
-       <div class="art-press"> 
-        <h3>Research Article</h3>
-        <p>Intestinal Microbiota: A New Actor in the Fight Against Obesity?</p>
-        <p><b>Corresponding author:</b> Giuseppe Merra, Adjunct Professor, Staff Physician, Emergency Department, “Agostino Gemelli” General Hospital, Catholic University of Sacred Heart, Largo, Agostino Gemelli, Rome, Italy; Tel: +39-380-3079304 E-mail: msdpublications@gmail.com</p>
-       <a href="static/assets/pdfs/premeltons-in-dna.pdf" target="_blank" class="a-btn"><i class="far fa-file-pdf"></i> PDF</a> <a href="current-issuse-fulltext.html" class="a-btn"><i class="far fa-file-alt"></i> FULL TEXT</a><br>
-      </div>  
+      </div> 
 </div>
+ {% endfor %}
   </div>
 
 
