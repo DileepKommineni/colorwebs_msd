@@ -331,7 +331,7 @@ font-weight: bold;
 	   /*animation:slide-down 0.7s;*/
 }
 .nav-menu > li > a:hover {
-    color: #19b2df;
+    color: #f26c4f;
     /*text-transform: uppercase;*/
 }
 @keyframes slide-down {
@@ -877,7 +877,7 @@ background: linear-gradient(rgba(140, 14, 44, 0.59), rgba(72, 70, 61, 0.66)), ur
 }
 #testimonials-sec .owl-theme .owl-controls .owl-page.active span,
 #testimonials-sec .owl-theme .owl-controls.clickable .owl-page:hover span{
-    background: #19b2df;
+    background: #f26c4f;
 }
 #testimonials-sec .description{
 	/*width: 500px;
@@ -1111,7 +1111,7 @@ footer.nb-footer {
 background: #222;
 background-image: url(../images/footer-bg1.jpg);
 background-size: cover;
-border-top: 4px solid #19b2df;
+border-top: 4px solid #f26c4f;
  }
 footer.nb-footer .about {
 margin: 0 auto;
@@ -1149,7 +1149,7 @@ footer.nb-footer .footer-info-single .title {
 color: #aaa;
 text-transform: uppercase;
 font-size: 16px;
-border-left: 4px solid #19b2df;
+border-left: 4px solid #f26c4f;
 padding-left: 5px; }
 footer.nb-footer .footer-info-single ul li a {
 display: block;
@@ -1160,7 +1160,7 @@ padding: 2px 0;
     transition: all 0.3s ease-in-out;
  }
 footer.nb-footer .footer-info-single ul li a:hover {
-color: #19b2df; 
+color: #f26c4f; 
 padding: 2px 6px;
 }
 footer.nb-footer .footer-info-single p {
@@ -1179,7 +1179,7 @@ padding: 0; }
 	text-align: right;
 }
 .design a{
-	color: #19b2df;
+	color: #f26c4f;
 }
 #testimonials-sec{
 	padding:30px 0;
@@ -2532,10 +2532,10 @@ background: linear-gradient(to bottom right, #98fdfc, #026ce6);
       background: #fff;
 }
 .nav-dropdown > li > a:hover,  .nav-dropdown > li > a:focus{
-  color: #19b2df;
+  color: #f26c4f;
 }
 .page-scroll .nav-menu > li > a:hover {
-    color: #19b2df;
+    color: #f26c4f;
   }
 .headtoppart .info-box {
     position: relative;
@@ -3144,10 +3144,10 @@ text-align: left;
 
 .default-portfolio-item .overlay-box .more-link:hover{
   background:#ffffff;
-  color:#19b2df;  
+  color:#f26c4f;  
 }
 .donate-btn{
-  background-color: #19b2df;
+  background-color: #f26c4f;
 }
 .donate-btn a{
 color: #fff !important;
@@ -3156,7 +3156,7 @@ color: #fff !important;
 color: #1a1a1a;
 }
 .orange-clr{
-color: #19b2df;
+color: #f26c4f;
 }
 .green-clr{
   color: #1a1a1a;
@@ -3167,8 +3167,8 @@ color: #19b2df;
   font-weight: bold;
 }
 .read-mr{
-  border: 2px solid #19b2df;
-  background-color: #19b2df;
+  border: 2px solid #f26c4f;
+  background-color: #f26c4f;
   color: #fff;
   padding: 6px 15px;
   transition: 1s;
@@ -3234,7 +3234,7 @@ padding: 10px 0px 20px;
     font-weight: 500;
     line-height: 16px;
   color: #ffffff;
-  background: #19b2df;
+  background: #f26c4f;
  width: 50px;
     height: 50px;
   padding-top: 10px;
@@ -3286,7 +3286,7 @@ padding: 10px 0px 20px;
 .events-section .right-side p:hover {
     font-size: 14px;
    
-    color: #19b2df;
+    color: #f26c4f;
     }
 .events-section .events-slide{
   position: relative;
@@ -3498,7 +3498,7 @@ background-color: #0000009c;
     top:2%;
     left:8%;
     padding: 3% 5%;
-    background: #19b2df;
+    background: #f26c4f;
 }
 #recently-sec .post-slide .month{
     font-size: 14px;
@@ -3878,7 +3878,7 @@ transform: scale(1.2);
 .ba-font-ff{
   font-weight: bold;
   padding-left: 15px;
-  color: #19b2df;
+  color: #f26c4f;
 }
 #banner-section{
   background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.09)), url(../images/back-bg2.jpg);

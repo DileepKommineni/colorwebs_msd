@@ -576,7 +576,7 @@ body {
 .navigation-landscape .megamenu-list{margin:-15px 0;padding:20px 0;border-right:solid 1px #f0f0f0}
 .navigation-landscape .megamenu-list:last-child{border:none}
 .megamenu-list>li>a{width:100%;padding:10px 15px;display:inline-block;color:#343a40;text-decoration:none;font-size:13px;}
-.megamenu-list>li>a:hover{background-color:#19b2df;color:#fff}
+.megamenu-list>li>a:hover{background-color:#f26c4f;color:#fff}
 .megamenu-list>li.megamenu-list-title>a{font-size:12px;font-weight:600;text-transform:uppercase;color:#343a40}
 .megamenu-list>li.megamenu-list-title>a:hover{background-color:transparent}
 .navigation-landscape .list-col-2{width:50%}

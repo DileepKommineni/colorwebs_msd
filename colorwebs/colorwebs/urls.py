@@ -26,7 +26,7 @@ urlpatterns = [
  	path('signup/', views.signup_user, name="signup-user"),
  	# Signup submit
  	path('signup/submit/', views.signup_submit, name="signup-submit"),
-
+    path('',views.home,name="home"),
     path('home',views.home,name="home"),
     path('about_journal',views.about_journal,name="about_journal"),
 
