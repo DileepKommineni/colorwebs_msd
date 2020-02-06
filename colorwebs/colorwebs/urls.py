@@ -45,6 +45,7 @@ urlpatterns = [
     path('contact',views.contact,name="contact"),
     path('current_issue',views.current_issue,name="current_issue"),
     path('current_issue_fulltext',views.current_issue_fulltext,name="current_issue_fulltext"),
+    path('current_issuse_fulltext',views.current_issue_fulltext,name='issuessss'),
     path('ebooks',views.ebooks,name="ebooks"),
     path('editor_guidelines',views.editor_guidelines,name="editor_guidelines"),
     path('editorial_board',views.editor_board,name="editoral_board"),

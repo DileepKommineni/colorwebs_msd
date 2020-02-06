@@ -2479,7 +2479,7 @@ background: linear-gradient(to bottom right, #98fdfc, #026ce6);
 
 .googleplusBtn:before{
       font-family: "FontAwesome";
-      content: "\f0d5"; /* add googleplus icon */
+      content: "\f16d"; /* add googleplus icon */
 }
 
 .googleplusBtn:hover{
@@ -2984,7 +2984,7 @@ a:hover{
 }
 header{
   background-color: #fff;
-  border-bottom: 3px solid #0b8fb6;
+  border-bottom: 3px solid #f26c4f;
 
 }
 #white-color-bg{
@@ -3372,7 +3372,7 @@ background-color: #0000009c;
   margin-bottom: 15px;
 }
 .rev_title{
-  background-color: #0e96bd;
+  background-color: #f26c4f;
   padding: 7px;
     color: #fff;
 }

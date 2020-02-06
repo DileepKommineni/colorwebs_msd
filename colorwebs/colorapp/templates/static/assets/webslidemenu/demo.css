@@ -29,7 +29,7 @@ body {
 .headtoppart {
   display: block;
   width: 100%;
-   background: linear-gradient(#047da0 0%, #119ec7 50%, #1398bd 100%);
+   background-color: #f26c4f;
   height: 30px;
   margin: 0 auto;
   padding: 0;

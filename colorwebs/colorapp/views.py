@@ -96,7 +96,7 @@ def current_issue(request):
 			)
 
 def current_issue_fulltext(request):
-	return render(request,'static/current-issue-fulltext.html')
+	return render(request,'static/current-issuse-fulltext.html')
 
 def ebooks(request):
 	return render(request,'static/ebooks.html')
@@ -171,21 +171,24 @@ def article_submit(request):
 		article_type = request.POST.get("article_type")
 		article_title = request.POST.get("article_title")
 		attachment_article = request.FILES.get("attachment_article")
-
-		article_qs = Article.objects.create(
-					title=title,
-					full_name=full_name,
-					university=university,
-					affilliation=affilliation,
-					email=email,
-					phone_no=phone_no,
-					choose_journal=choose_journal,
-					article_type=article_type,
-					article_title=article_title,
-					attachment_article=attachment_article
-					)
-		messages.success(request, 'Article Posted successfully.')
-		return render(request,'static/submit-articles.html')
+		if title and full_name and university and email:
+			article_qs = Article.objects.create(
+						title=title,
+						full_name=full_name,
+						university=university,
+						affilliation=affilliation,
+						email=email,
+						phone_no=phone_no,
+						choose_journal=choose_journal,
+						article_type=article_type,
+						article_title=article_title,
+						attachment_article=attachment_article
+						)
+			messages.success(request, 'Article Posted successfully.')
+			return render(request,'static/submit-articles.html')
+		else:
+			messages.success(request, 'Please fill all details')
+			return render(request,'static/submit-articles.html')
 
 def contact_submit(request):
 	if request.method == "POST":
